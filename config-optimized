@@ -1,0 +1,159 @@
+#
+# Kernel Configuration Optimized for ThinkPad X280 (Intel i5-7200U)
+# Minimal, responsive, and efficient for desktop/laptop use
+#
+
+###########################################################################
+# General setup
+###########################################################################
+CONFIG_LOCALVERSION="-nitrous"
+CONFIG_HAVE_DOT_CONFIG=y
+CONFIG_BPF=y
+CONFIG_CROSS_MEMORY_ATTACH=y
+
+###########################################################################
+# Compiler options
+###########################################################################
+CONFIG_CC_IS_GCC=y
+
+###########################################################################
+# System Type
+###########################################################################
+CONFIG_64BIT=y
+CONFIG_X86_64=y
+CONFIG_X86=y
+CONFIG_MTRR=y
+CONFIG_NR_CPUS=16
+
+###########################################################################
+# Processor Features
+###########################################################################
+CONFIG_SMP=y
+CONFIG_PREEMPT=y
+CONFIG_HZ=1000
+CONFIG_NO_HZ_IDLE=y
+CONFIG_HIGH_RES_TIMERS=y
+
+###########################################################################
+# Power Management and ACPI Options
+###########################################################################
+CONFIG_ACPI=y
+CONFIG_ACPI_BUTTON=y
+CONFIG_ACPI_BATTERY=y
+CONFIG_ACPI_VIDEO=y
+CONFIG_ACPI_PROCESSOR=y
+CONFIG_SUSPEND=y
+CONFIG_HIBERNATION=y
+CONFIG_PM_SLEEP=y
+CONFIG_PM_AUTOSLEEP=y
+
+###########################################################################
+# Bus support
+###########################################################################
+CONFIG_PCI=y
+CONFIG_PCI_DOMAINS=y
+CONFIG_PCI_MMCONFIG=y
+
+###########################################################################
+# Kernel Features
+###########################################################################
+CONFIG_KALLSYMS=n
+CONFIG_MAGIC_SYSRQ=y
+CONFIG_MODULES=y
+CONFIG_MODULE_UNLOAD=y
+
+###########################################################################
+# CPU Frequency scaling
+###########################################################################
+CONFIG_CPU_FREQ=y
+CONFIG_X86_INTEL_PSTATE=y
+CONFIG_CPU_FREQ_GOV_SCHEDUTIL=y
+
+###########################################################################
+# Networking support
+###########################################################################
+CONFIG_NET=y
+CONFIG_PACKET=y
+CONFIG_INET=y
+CONFIG_IP_MULTICAST=y
+CONFIG_NETFILTER=y
+CONFIG_NF_CONNTRACK=y
+
+###########################################################################
+# File systems
+###########################################################################
+CONFIG_EXT4_FS=y
+CONFIG_VFAT_FS=y
+
+###########################################################################
+# Cryptographic options
+###########################################################################
+CONFIG_CRYPTO=y
+CONFIG_CRYPTO_AES=y
+CONFIG_CRYPTO_SHA256=y
+
+###########################################################################
+# Device Drivers
+###########################################################################
+
+# PCI Express Port Bus Support
+CONFIG_PCIEPORTBUS=y
+
+# Thunderbolt support
+CONFIG_THUNDERBOLT=y
+
+# NVMe SSD support
+CONFIG_NVME_CORE=y
+CONFIG_BLK_DEV_NVME=y
+
+# Intel i915 Graphics
+CONFIG_DRM=y
+CONFIG_DRM_I915=y
+CONFIG_DRM_FBDEV_EMULATION=y
+
+# Sound support
+CONFIG_SOUND=y
+CONFIG_SND=y
+CONFIG_SND_HDA_INTEL=y
+
+# USB support
+CONFIG_USB_SUPPORT=y
+CONFIG_USB_XHCI_HCD=y
+CONFIG_USB_STORAGE=y
+
+# Input devices
+CONFIG_INPUT=y
+CONFIG_INPUT_KEYBOARD=y
+CONFIG_INPUT_MOUSE=y
+CONFIG_SERIO=y
+
+# Intel Wireless 8265
+CONFIG_CFG80211=y
+CONFIG_MAC80211=y
+CONFIG_IWLWIFI=y
+
+# Intel Ethernet (e1000e)
+CONFIG_E1000E=y
+
+# Bluetooth support
+CONFIG_BT=y
+CONFIG_BT_USB=y
+
+# Thermal and Cooling support
+CONFIG_THINKPAD_ACPI=y
+CONFIG_THERMAL=y
+CONFIG_THERMAL_GOV_FAIR_SHARE=y
+
+###########################################################################
+# Miscellaneous
+###########################################################################
+CONFIG_SYSVIPC=y
+
+CONFIG_BPF=n
+CONFIG_BPF_SYSCALL=n
+CONFIG_BPF_JIT=n
+CONFIG_BPF_JIT_ALWAYS_ON=n
+CONFIG_BPF_JIT_DEFAULT_ON=n
+CONFIG_PAHOLE_HAS_BTF_TAG=n
+CONFIG_DEBUG_INFO_BTF=n
+CONFIG_DEBUG_INFO_BTF_MODULES=n
